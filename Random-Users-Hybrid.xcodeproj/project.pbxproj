@@ -13,9 +13,10 @@
 		0BEA5B0B237C29510048F96D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BEA5B0A237C29510048F96D /* Assets.xcassets */; };
 		0BEA5B0E237C29510048F96D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BEA5B0C237C29510048F96D /* LaunchScreen.storyboard */; };
 		0BEA5B11237C29510048F96D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BEA5B10237C29510048F96D /* main.m */; };
-		0BEA5B1C237C2CB30048F96D /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BEA5B1B237C2CB30048F96D /* User.m */; };
+		0BEA5B1C237C2CB30048F96D /* DWPUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BEA5B1B237C2CB30048F96D /* DWPUser.m */; };
 		0BEA5B20237C2CD40048F96D /* UsersTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BEA5B1F237C2CD40048F96D /* UsersTableViewController.m */; };
 		0BEA5B24237C2CF70048F96D /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BEA5B23237C2CF70048F96D /* DetailViewController.m */; };
+		0BEA5B27237C2E740048F96D /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEA5B26237C2E740048F96D /* UserController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,12 +30,14 @@
 		0BEA5B0D237C29510048F96D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0BEA5B0F237C29510048F96D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0BEA5B10237C29510048F96D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		0BEA5B1A237C2CB30048F96D /* User.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
-		0BEA5B1B237C2CB30048F96D /* User.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		0BEA5B1A237C2CB30048F96D /* DWPUser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DWPUser.h; sourceTree = "<group>"; };
+		0BEA5B1B237C2CB30048F96D /* DWPUser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DWPUser.m; sourceTree = "<group>"; };
 		0BEA5B1E237C2CD40048F96D /* UsersTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UsersTableViewController.h; sourceTree = "<group>"; };
 		0BEA5B1F237C2CD40048F96D /* UsersTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UsersTableViewController.m; sourceTree = "<group>"; };
 		0BEA5B22237C2CF70048F96D /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		0BEA5B23237C2CF70048F96D /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		0BEA5B25237C2E740048F96D /* Random-Users-Hybrid-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Random-Users-Hybrid-Bridging-Header.h"; sourceTree = "<group>"; };
+		0BEA5B26237C2E740048F96D /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,11 +71,13 @@
 			isa = PBXGroup;
 			children = (
 				0BEA5B1D237C2CBB0048F96D /* Model */,
+				0BEA5B28237C2E790048F96D /* Model Controller (Swift) */,
 				0BEA5B21237C2CDD0048F96D /* View Controllers */,
 				0BEA5B19237C2A850048F96D /* Storyboard */,
 				0BEA5B17237C2A620048F96D /* App Lifecycle */,
 				0BEA5B18237C2A7C0048F96D /* Resources */,
 				0BEA5B0F237C29510048F96D /* Info.plist */,
+				0BEA5B25237C2E740048F96D /* Random-Users-Hybrid-Bridging-Header.h */,
 			);
 			path = "Random-Users-Hybrid";
 			sourceTree = "<group>";
@@ -109,8 +114,8 @@
 		0BEA5B1D237C2CBB0048F96D /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				0BEA5B1A237C2CB30048F96D /* User.h */,
-				0BEA5B1B237C2CB30048F96D /* User.m */,
+				0BEA5B1A237C2CB30048F96D /* DWPUser.h */,
+				0BEA5B1B237C2CB30048F96D /* DWPUser.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -124,6 +129,14 @@
 				0BEA5B23237C2CF70048F96D /* DetailViewController.m */,
 			);
 			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		0BEA5B28237C2E790048F96D /* Model Controller (Swift) */ = {
+			isa = PBXGroup;
+			children = (
+				0BEA5B26237C2E740048F96D /* UserController.swift */,
+			);
+			path = "Model Controller (Swift)";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,6 +170,7 @@
 				TargetAttributes = {
 					0BEA5AFA237C29500048F96D = {
 						CreatedOnToolsVersion = 11.2;
+						LastSwiftMigration = 1120;
 					};
 				};
 			};
@@ -196,10 +210,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0BEA5B1C237C2CB30048F96D /* User.m in Sources */,
+				0BEA5B1C237C2CB30048F96D /* DWPUser.m in Sources */,
 				0BEA5B20237C2CD40048F96D /* UsersTableViewController.m in Sources */,
 				0BEA5B00237C29500048F96D /* AppDelegate.m in Sources */,
 				0BEA5B11237C29510048F96D /* main.m in Sources */,
+				0BEA5B27237C2E740048F96D /* UserController.swift in Sources */,
 				0BEA5B03237C29500048F96D /* SceneDelegate.m in Sources */,
 				0BEA5B24237C2CF70048F96D /* DetailViewController.m in Sources */,
 			);
@@ -341,6 +356,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C22Z4773SH;
 				INFOPLIST_FILE = "Random-Users-Hybrid/Info.plist";
@@ -350,6 +366,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dongwoopae.Random-Users-Hybrid";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Random-Users-Hybrid/Random-Users-Hybrid-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -358,6 +377,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C22Z4773SH;
 				INFOPLIST_FILE = "Random-Users-Hybrid/Info.plist";
@@ -367,6 +387,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dongwoopae.Random-Users-Hybrid";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Random-Users-Hybrid/Random-Users-Hybrid-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
