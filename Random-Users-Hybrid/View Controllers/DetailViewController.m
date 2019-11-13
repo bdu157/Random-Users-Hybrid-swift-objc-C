@@ -25,7 +25,6 @@
 
 }
 
-
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self updateViews];
@@ -38,9 +37,17 @@
         self.nameLabel.text = [self.user firstName];
         self.emailLabel.text = [self.user email];
         self.phoneNumberLabel.text = [self.user phoneNumber];
+        
+        [DWPUserController.sharedController fetchImagesWithimageURLString:self.user.imageURLString completionHandler:^(UIImage *image, NSError *error) {
+            if (error) {
+                NSLog(@"Error in fetching images: %@", error);
+            }
+            dispatch_async(dispatch_get_main_queue(), ^{
+                self.userImageView.image = image;
+            });
+        }];
     }
 }
-
 
 //setter
 -(void)setUser:(DWPUser *)user
@@ -50,6 +57,5 @@
         [self updateViews];
     }
 }
-
 
 @end
