@@ -9,6 +9,7 @@
 #import "UsersTableViewController.h"
 #import "DWPUser.h"
 #import "Random_Users_Hybrid-Swift.h"
+#import "DetailViewController.h"
 
 @interface UsersTableViewController ()
 
@@ -48,14 +49,14 @@
     return cell;
 }
 
-
-
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    
-}
-
-
+    if ([segue.identifier isEqualToString:@"ToUserDetail"]) {
+        NSIndexPath *selectedRow = self.tableView.indexPathForSelectedRow;
+        DetailViewController *detailVC = segue.destinationViewController;
+        detailVC.user = [self.users objectAtIndex:selectedRow.row];
+        }
+    }
 @end

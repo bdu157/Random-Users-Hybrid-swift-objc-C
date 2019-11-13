@@ -7,6 +7,8 @@
 //
 
 #import "DetailViewController.h"
+#import "Random_Users_Hybrid-Swift.h"  //DWPUserController 
+#import "DWPUser.h"
 
 @interface DetailViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *userImageView;
@@ -20,17 +22,26 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+  
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+
+#pragma mark - private methods
+-(void)updateViews
+{
+
 }
-*/
+
+
+//setter
+-(void)setUser:(DWPUser *)user
+{
+    if(_user != user) {
+        _user = user;
+        [self updateViews];
+    }
+}
+
 
 @end

@@ -8,10 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-NS_ASSUME_NONNULL_BEGIN
+@class DWPUser;
+//@class DWPUserController; you do not need to since userController is static shared
 
 @interface DetailViewController : UIViewController
 
+//@property (nonatomic) DWPUserController *dwpUserController;
+@property (nonatomic) DWPUser *user;
+
 @end
 
-NS_ASSUME_NONNULL_END
