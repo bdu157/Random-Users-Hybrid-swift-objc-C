@@ -21,11 +21,11 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    [DWPUserController.sharedController getUsers:100 completionHandler:^(NSArray<DWPUser *> *users, NSError *error) {
-        if (error) {
-            NSLog(@"error in getting users");
-        }
-    }];
+//    [DWPUserController.sharedController getUsers:100 completionHandler:^(NSArray<DWPUser *> *users, NSError *error) {
+//        if (error) {
+//            NSLog(@"error in getting users");
+//        }
+//    }];
     
     
     return YES;

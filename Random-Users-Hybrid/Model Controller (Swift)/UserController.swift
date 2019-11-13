@@ -62,6 +62,8 @@ class UserController: NSObject {
                 print(users)
                 print(users[0].firstName)
                 print(users[0].email)
+                print(users[0].phoneNumber)
+                print(users[0].imageURLString)
                 completion(users, nil)
                 
             } catch {
