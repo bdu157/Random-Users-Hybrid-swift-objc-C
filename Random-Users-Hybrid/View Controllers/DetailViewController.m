@@ -22,15 +22,23 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-  
+
 }
 
 
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self updateViews];
+}
 
 #pragma mark - private methods
 -(void)updateViews
 {
-
+    if (self.user) {
+        self.nameLabel.text = [self.user firstName];
+        self.emailLabel.text = [self.user email];
+        self.phoneNumberLabel.text = [self.user phoneNumber];
+    }
 }
 
 
