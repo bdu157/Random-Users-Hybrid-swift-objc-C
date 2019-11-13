@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
+NS_SWIFT_NAME(User)
 @interface DWPUser: NSObject
 
 @property (nonatomic, copy, readonly, nonnull) NSString *firstName;
