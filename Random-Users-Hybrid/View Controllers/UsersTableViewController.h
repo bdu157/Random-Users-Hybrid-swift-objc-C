@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  UsersTableViewController.h
 //  Random-Users-Hybrid
 //
 //  Created by Dongwoo Pae on 11/13/19.
@@ -8,8 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface UsersTableViewController : UITableViewController
 
 @end
 
