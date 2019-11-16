@@ -25,14 +25,14 @@
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary
 {
     NSString *firstName = dictionary[@"name"][@"first"];
-    NSString *email = dictionary[@"email"];
-    NSString *phoneNumber = dictionary[@"phone"];
-    NSString *imageURLString = dictionary[@"picture"][@"large"];
+//    NSString *email = dictionary[@"email"];
+//    NSString *phoneNumber = dictionary[@"phone"];
+//    NSString *imageURLString = dictionary[@"picture"][@"large"];
     
-    if (!firstName || !email || !phoneNumber || !imageURLString) {
-        return nil;
-    }
-    return [self initWithFirstName:firstName email:email phoneNumber:phoneNumber imageURLString:imageURLString];
+//    if (!firstName || !email || !phoneNumber || !imageURLString) {
+//        return nil;
+//    }
+    return [self initWithFirstName:firstName email:@"" phoneNumber:@"" imageURLString:@""];
 }
 
 

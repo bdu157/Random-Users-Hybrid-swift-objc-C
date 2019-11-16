@@ -15,6 +15,5 @@
 
 //@property (nonatomic) DWPUserController *dwpUserController;
 @property (nonatomic) DWPUser *user;
-
 @end
 

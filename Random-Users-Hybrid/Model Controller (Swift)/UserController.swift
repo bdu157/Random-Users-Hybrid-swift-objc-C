@@ -97,4 +97,13 @@ class UserController: NSObject {
         }.resume()
     }
     
+    //add fillinUser method here that will fetch ther rest of properties besides first name since first name is what you need for maintableview controller
+    
+    //make property initializer to have all nil besides first name
+    
+    func fillInUser(for user: User) {
+        
+    }
+    
+    
 }
