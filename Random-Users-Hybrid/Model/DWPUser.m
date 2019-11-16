@@ -10,7 +10,7 @@
 
 @implementation DWPUser
 
-- (instancetype)initWithFirstName:(NSString *)firstName email:(NSString *)email phoneNumber:(NSString *)phoneNumber imageURLString:(NSString *)imageURLString
+- (instancetype)initWithFirstName:(NSString *)firstName email:(nullable NSString *)email phoneNumber:(nullable NSString *)phoneNumber imageURLString:(nullable NSString *)imageURLString
 {
     self = [super init];
     if (self) {
@@ -32,7 +32,7 @@
 //    if (!firstName || !email || !phoneNumber || !imageURLString) {
 //        return nil;
 //    }
-    return [self initWithFirstName:firstName email:@"" phoneNumber:@"" imageURLString:@""];
+    return [self initWithFirstName:firstName email:NULL phoneNumber:NULL imageURLString:NULL];
 }
 
 

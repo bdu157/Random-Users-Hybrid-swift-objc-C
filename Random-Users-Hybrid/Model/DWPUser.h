@@ -12,11 +12,11 @@ NS_SWIFT_NAME(User)
 @interface DWPUser: NSObject
 
 @property (nonatomic, copy, readonly, nonnull) NSString *firstName;
-@property (nonatomic, copy, readonly, nonnull) NSString *email;
-@property (nonatomic, copy, readonly, nonnull) NSString *phoneNumber;
-@property (nonatomic, copy, readonly, nonnull) NSString *imageURLString;
+@property (nonatomic, copy, nullable) NSString *email;
+@property (nonatomic, copy, nullable) NSString *phoneNumber;
+@property (nonatomic, copy, nullable) NSString *imageURLString;
 
--(nonnull instancetype)initWithFirstName:(nonnull NSString *)firstName email:(nonnull NSString *)email phoneNumber:(nonnull NSString *)phoneNumber imageURLString:(nonnull NSString *)imageURLString;
+-(nonnull instancetype)initWithFirstName:(nonnull NSString *)firstName email:(nullable NSString *)email phoneNumber:(nullable NSString *)phoneNumber imageURLString:(nullable NSString *)imageURLString;
 
 -(nullable instancetype)initWithDictionary:(nonnull NSDictionary *)dictionary;
 
